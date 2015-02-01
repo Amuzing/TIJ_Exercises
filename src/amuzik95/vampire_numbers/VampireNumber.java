@@ -1,7 +1,7 @@
 package amuzik95.vampire_numbers;
 
 import java.util.*;
-
+//Test commit
 /**
  * Created by Amuzik on 31.01.2015.
  */
