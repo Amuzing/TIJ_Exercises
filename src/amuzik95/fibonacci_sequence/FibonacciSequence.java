@@ -5,19 +5,15 @@ import java.util.ArrayList;
  * Created by Amuzik on 31.01.2015.
  */
 public class FibonacciSequence {
+    public static int getFibNumber (int n) {
+        if(n<2)
+            return 1;
+        return getFibNumber(n-1) + getFibNumber(n-2);
+    }
     public static ArrayList<Integer> getFibSeq(int n) {
         ArrayList<Integer> alTemp = new ArrayList<Integer>();
-        int pf=1,nf=1,temp;
-        alTemp.add(pf);
-        alTemp.add(nf);
-        n-=2;
-        while(n>0) {
-            temp=nf;
-            nf+=pf;
-            pf=temp;
-            alTemp.add(nf);
-            --n;
-        }
+        for(int i=0; i<n; ++i)
+            alTemp.add(getFibNumber(i));
         return alTemp;
     }
 
